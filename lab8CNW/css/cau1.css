@@ -1,0 +1,36 @@
+h1{
+    color: deepskyblue;
+    font-size: 30px;
+}
+.title{
+    color: deepskyblue;
+    font-size: 30px;
+}
+.header{
+    text-align: center;
+    margin: 10px;
+    border: solid 1px black;
+    box-shadow: black;
+}
+.container{
+    border: solid 1px black;
+}
+.destable{
+    margin: 10px;
+    border: solid 1px black;
+    box-shadow: black;
+}
+table, th, td {
+    border: 1px solid deeppink;
+}
+.th1{
+    border: none;
+    width: 20%;
+}
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.tdcheckbox{
+    text-align: center;
+}
