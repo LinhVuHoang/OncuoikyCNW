@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div class="container"><form>
+<div class="container"><form name="form" action="www.animalsites.com" method="POST">
     <div class="header">
     <h1>BẢNG ĐIỀU TRA VẬT NUÔI YÊU THÍCH</h1>
     <p class="title">Trả lời các câu hỏi sau về các con vật yêu thích của bạn</p>
@@ -48,45 +48,18 @@
 </div>
 <div class="buttondiv">
     <div style="margin-top: 50px">
-        <input type="button" value="Huy" onclick="Cancel()"> &nbsp;
+        <input type="button" value="Huy" onclick="submit()"> &nbsp;
         <input type="reset" value="Xoa">
     </div>
     &nbsp;
     <div>
-        <input type="submit" value="Gui" onclick="submit()">
+        <input  type="submit" value="Gui" onclick="myFunction(2,3)">
     </div>
 </div>
     </form>
 </div>
+<script type="text/javascript" src="cau1.js">
 
-</body>
-<script>
-    function validate(){
-        // var cbDog = document.getElementById("cbDog")
-        // if (!this.form.cbDog.checked){
-        //     alert("Xin mời nhập checkbox")
-        // }
-        let radio = 0;
-        if(this.form.cbDog?.checked){
-            if(!this.form.txtDog?.value.trim().length)
-            {
-                alert("Bạn phải nhập tên con vật bạn yêu thích");
-                f.txtDog.focus();
-                return false;
-            }
-            this.form.colorDog.forEach(e => {
-                if(e?.checked) radio ++;
-            });
-            if(radio == 0){
-                alert("Bạn phải chọn màu lông");
-                return false;
-            }
-
-        }
-    }
-    function submit(){
-        alert("Không lỗi");
-
-    }
 </script>
+</body>
 </html>
