@@ -34,3 +34,32 @@ table.center {
 .tdcheckbox{
     text-align: center;
 }
+.textinput{
+    text-align: center;
+}
+.radiobutton{
+    text-align: center;
+}
+.reasonlike{
+    text-align: center;
+    margin: 10px;
+    border: solid 1px black;
+    box-shadow: black;
+}
+.reasontext{
+    color: deeppink;
+    font-size: 20px;
+    text-decoration: underline;
+}
+textarea{
+    scroll-behavior: auto;
+    overflow-y: scroll;
+    resize: none;
+}
+.buttondiv{
+    text-align: center;
+    margin: 10px;
+    border: solid 1px black;
+    box-shadow: black;
+    padding: 5px;
+}

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Bảng Điều tra vật nuôi yêu thích</title>
     <link rel="stylesheet" href="css/cau1.css">
 </head>
 <body>
-<div class="container">
-<div class="header">
+
+<div class="container"><form>
+    <div class="header">
     <h1>BẢNG ĐIỀU TRA VẬT NUÔI YÊU THÍCH</h1>
     <p class="title">Trả lời các câu hỏi sau về các con vật yêu thích của bạn</p>
 </div>
@@ -20,14 +21,72 @@
             </tr>
             <tr>
                 <td>BẠN NUÔI</td>
-                <td class="tdcheckbox"><input type="checkbox" name="cbDog">CÓ</td>
-                <td class="tdcheckbox"><input type="checkbox" name="cbCat">CÓ</td>
+                <td id="cbDog" class="tdcheckbox"><input type="checkbox" name="cbDog">CÓ</td>
+                <td id="cbCat" class="tdcheckbox"><input type="checkbox" name="cbCat">CÓ</td>
             </tr>
-
+            <tr>
+                <td>TÊN</td>
+                <td class="textinput"><input type="text" name="txtDog"></td>
+                <td class="textinput"><input type="text" name="txtCat"></td>
+            </tr>
+            <tr>
+                <td>MÀU LÔNG</td>
+                <td class="radiobutton"><input type="radio" name="radiodog">Đen
+                    <input type="radio" name="radiodog">Trắng
+                    <input type="radio" name="radiodog">Khác
+                </td>
+                <td class="radiobutton"><input type="radio" name="radioCat">Đen
+                    <input type="radio" name="radioCat">Trắng
+                    <input type="radio" name="radioCat">Khác
+                </td>
+            </tr>
         </table>
 </div>
-<div></div>
-<div></div>
+<div class="reasonlike">
+    <p class="reasontext"><i>Lý do bạn yêu quý nó</i></p>
+    <textarea></textarea>
 </div>
+<div class="buttondiv">
+    <div style="margin-top: 50px">
+        <input type="button" value="Huy" onclick="Cancel()"> &nbsp;
+        <input type="reset" value="Xoa">
+    </div>
+    &nbsp;
+    <div>
+        <input type="submit" value="Gui" onclick="submit()">
+    </div>
+</div>
+    </form>
+</div>
+
 </body>
+<script>
+    function validate(){
+        // var cbDog = document.getElementById("cbDog")
+        // if (!this.form.cbDog.checked){
+        //     alert("Xin mời nhập checkbox")
+        // }
+        let radio = 0;
+        if(this.form.cbDog?.checked){
+            if(!this.form.txtDog?.value.trim().length)
+            {
+                alert("Bạn phải nhập tên con vật bạn yêu thích");
+                f.txtDog.focus();
+                return false;
+            }
+            this.form.colorDog.forEach(e => {
+                if(e?.checked) radio ++;
+            });
+            if(radio == 0){
+                alert("Bạn phải chọn màu lông");
+                return false;
+            }
+
+        }
+    }
+    function submit(){
+        alert("Không lỗi");
+
+    }
+</script>
 </html>
