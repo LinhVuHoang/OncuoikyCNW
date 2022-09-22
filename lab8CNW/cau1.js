@@ -1,3 +1,4 @@
+// declare function ( ta phải viết function để định nghĩa nó rồi phải gọi để xác định nó)
 function validate(){
     // var cbDog = document.getElementById("cbDog")
     // if (!this.form.cbDog.checked){
@@ -30,5 +31,4 @@ function myFunction(p1,p2) {
     console.log(p1*p2);
     return p1 * p2;
 }
-submit();
 console.log("Ready")
