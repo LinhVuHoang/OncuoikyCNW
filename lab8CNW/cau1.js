@@ -1,4 +1,4 @@
-// declare function ( ta phải viết function để định nghĩa nó rồi phải gọi để xác định nó)
+// declare function ( ta phải viết function để định nghĩa nó rồi phải gọi để xác định nó (gọi xác định có thể trước hoặc sau khi khai báo function))
 function validate(){
     // var cbDog = document.getElementById("cbDog")
     // if (!this.form.cbDog.checked){
@@ -22,6 +22,7 @@ function validate(){
 
     }
 }
+submit();
 function submit(){
     alert("Không có lỗi");
     console.log("Hiện rồi");
