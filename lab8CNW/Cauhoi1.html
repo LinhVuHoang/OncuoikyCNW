@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="css/cau1.css">
 </head>
 <body>
-<!--action="www.animalsites.com" method="POST"-->
-<div class="container"><form name="form" >
+<div class="container"><form name="form" id="f" action="www.animalsites.com" onsubmit="return request()" method="POST" >
     <div class="header">
     <h1>BẢNG ĐIỀU TRA VẬT NUÔI YÊU THÍCH</h1>
     <p class="title">Trả lời các câu hỏi sau về các con vật yêu thích của bạn</p>
@@ -44,16 +43,16 @@
 </div>
 <div class="reasonlike">
     <p class="reasontext"><i>Lý do bạn yêu quý nó</i></p>
-    <textarea></textarea>
+    <textarea name="text" id="text1"></textarea>
 </div>
 <div class="buttondiv">
     <div style="margin-top: 50px">
-        <input type="button" value="Huy" onclick="submit();"> &nbsp;
+        <input id="huybtn" type="button" value="Huy" onclick="setFocus()"> &nbsp;
         <input type="reset" value="Xoa">
     </div>
     &nbsp;
     <div>
-        <input  type="submit" value="Gui" onclick="myFunction(2,3)">
+        <input id="guibtn" type="submit" value="Gui" onsubmit="submit()">
     </div>
 </div>
     </form>

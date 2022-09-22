@@ -1,35 +1,59 @@
 // declare function ( ta phải viết function để định nghĩa nó rồi phải gọi để xác định nó (gọi xác định có thể trước hoặc sau khi khai báo function))
-function validate(){
-    // var cbDog = document.getElementById("cbDog")
-    // if (!this.form.cbDog.checked){
-    //     alert("Xin mời nhập checkbox")
-    // }
-    let radio = 0;
-    if(this.form.cbDog?.checked){
-        if(!this.form.txtDog?.value.trim().length)
-        {
-            alert("Bạn phải nhập tên con vật bạn yêu thích");
-            f.txtDog.focus();
+text1 = document.getElementById("text1")
+function setFocus(){
+    window.alert("Bạn đã hủy bỏ việc gửi bản điều tra");
+    // this.text1.focus();
+    this.form.text.focus();// form có thể là name hoặc id (text cũng như vậy)
+}
+function request(){
+        if (this.form.cbDog?.checked) {
+            if (this.form.txtDog?.value.length == 0) {
+                alert("Bạn phải nhập tên con vật mình yêu quý");
+                this.form.txtDog?.focus(); //? là 1 hàm if tắt để kiếm tra txtDog có hay không
+                return false;
+            }
+            var i = 0;
+            this.form.radiodog.forEach(e => {
+                if (e?.checked) {
+                    i++;
+                }
+            })
+            if (i == 0) {
+                alert("Bạn phải chọn màu lông cho con vật yêu quý của bạn");
+                return false;
+            }
+        } else if (this.form.cbCat?.checked) {
+            if (this.form.txtCat?.value.length == 0) {
+                alert("Bạn phải nhập tên con vật mình yêu quý");
+                this.form.txtCat?.focus(); //? là 1 hàm if tắt để kiếm tra txtDog có hay không
+                return false;
+            }
+            var i = 0;
+            this.form.radioCat.forEach(e => {
+                if (e?.checked) {
+                    i++;
+                }
+            })
+            if (i == 0) {
+                alert("Bạn phải chọn màu lông cho con vật yêu quý của bạn");
+                return false;
+            }
+        }
+        if (!this.form.cbDog?.checked && !this.form.cbCat?.checked) {
+            alert("Bạn phải chọn ít nhất một con vật");
             return false;
         }
-        this.form.colorDog.forEach(e => {
-            if(e?.checked) radio ++;
-        });
-        if(radio == 0){
-            alert("Bạn phải chọn màu lông");
-            return false;
-        }
-
+        return true;
+}
+function submit(e){
+    let check = request();
+    if(!check){
+       e.preventDefault();
     }
 }
-submit();
-function submit(){
-    alert("Không có lỗi");
-    console.log("Hiện rồi");
-    return true;
-}
-function myFunction(p1,p2) {
-    console.log(p1*p2);
-    return p1 * p2;
-}
-console.log("Ready")
+setFocus();
+request();
+// btnhuy = document.getElementById("huybtn")
+// btnhuy.addEventListener("click",setFocus);
+//  btngui = document.getElementById("guibtn")
+//  btngui.addEventListener("submit",request);
