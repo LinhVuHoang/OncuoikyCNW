@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #input1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<input  id="input1" name="input1" type="button" value="eventhandle">
+<input class="button2" id="input2" name="input2" type="button" value="addlistenerevent">
+<script type="text/javascript">
+    //Phương thức querySelectorAll() là phương thức JavaScript truy lục tất cả các phần tử trong tài liệu khớp với một bộ chọn CSS được chỉ định, giá trị trả về một đối tượng NodeList tĩnh (không phải NodeList thực).
+    //Phương thức querySelector() trả về phần tử đầu tiên là phần tử con của phần tử mà nó được gọi ra khớp với nhóm bộ chọn được chỉ định.
+
+  //  Lưu ý: Phương thức querySelector() chỉ trả về phần tử đầu tiên khớp với các bộ chọn được chỉ định. Để trả về tất cả các kết quả phù hợp, sử dụng phương thức querySelectorAll() để thay thế.
+    const button = document.querySelector("#input1");
+    //JavaScript có thể nhận kích hoạt một sự kiện nào đó từ một Object bằng cách sử dụng thuộc tính "EventHandler".
+    button.onclick = function (){
+        console.log("Hello LVH");
+        alert("Hello LVH");
+    }
+    button.onclick = function (){
+        console.log("Hello MPT");
+        alert("Hello MPT");
+    }
+    //ở "EventHandler" sẽ chạy cái cuối cùng
+    //AddEventListener trong js Phương pháp khác để sử dụng sự kiện trong JavaScript là thêm trình xử lý sự kiện vào một Object. Bạn cũng có thể quen thuộc với điều này.
+    const button1 = document.querySelector(".button2");
+    button1.addEventListener("click",event=>{
+        console.log("Hello Hoàng Linh")
+        alert("Hello Hoàng Linh");
+    })
+    button1.addEventListener("click", event => {
+        console.log("How are you")
+        alert("How are you");
+    })
+    //ở addEventListener sẽ chạy lần lượt sau mỗi lần click sẽ thêm 1 event
+</script>
+</body>
+</html>
