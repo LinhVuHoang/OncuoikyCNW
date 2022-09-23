@@ -1,6 +1,6 @@
 // declare function ( ta phải viết function để định nghĩa nó rồi phải gọi để xác định nó (gọi xác định có thể trước hoặc sau khi khai báo function))
 text1 = document.getElementById("text1")
-function setFocus(){
+function setFocus(e){
     window.alert("Bạn đã hủy bỏ việc gửi bản điều tra");
     // this.text1.focus();
     this.form.text.focus();// form có thể là name hoặc id (text cũng như vậy)
@@ -45,14 +45,8 @@ function request(){
         }
         return true;
 }
-function submit(e){
-    let check = request();
-    if(!check){
-       e.preventDefault();
-    }
-}
-setFocus();
-request();
+//setFocus();
+// request();
 // btnhuy = document.getElementById("huybtn")
 // btnhuy.addEventListener("click",setFocus);
 //  btngui = document.getElementById("guibtn")
